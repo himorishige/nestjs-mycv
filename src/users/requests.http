@@ -3,9 +3,24 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-  "email": "asdf@example.com",
-  "password": "asdf"
+  "email": "test2@example.com",
+  "password": "12345"
 }
+
+### Sing in as an existing user
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+  "email": "test2@example.com",
+  "password": "12345"
+}
+
+### Get the currently signed in user
+GET http://localhost:3000/auth/whoami
+
+### Sing out
+POST http://localhost:3000/auth/signout
 
 ### Find a paticular user with a given ID
 GET http://localhost:3000/auth/3
@@ -24,3 +39,10 @@ Content-Type: application/json
 {
   "email": "aaa@aaa.com"
 }
+
+### Set a color
+GET http://localhost:3000/auth/colors/red
+
+
+### Get the color
+GET http://localhost:3000/auth/colors
